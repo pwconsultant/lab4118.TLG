@@ -139,6 +139,9 @@
     "SharedVmConfig": {
       "location": "[resourceGroup().location]",
       "vmSize": "[parameters('vmSize')]",
+      "vmDCSize": "[parameters('vmDCSize')]",
+      "vmClientSize": "[parameters('vmClientSize')]",
+      "vmAppSize": "[parameters('vmAppSize')]",
       "clientOS": "[variables('VMs').clientOS]",
       "serverOS": "[variables('VMs').serverOS]",
       "domainUsername": "[variables('domainUsername')]",
