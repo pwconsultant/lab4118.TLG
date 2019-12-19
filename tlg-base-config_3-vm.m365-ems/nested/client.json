@@ -26,7 +26,7 @@
       "dependsOn": [],
       "properties": {
         "hardwareProfile": {
-          "vmSize": "[parameters('SharedVmConfig').vmSize]"
+          "vmSize": "[parameters('SharedVmConfig').vmClientSize]"
         },
         "osProfile": {
           "computerName": "[parameters('vmName')]",

@@ -20,7 +20,13 @@
     "adminPassword": {
       "value": ""
     },
-    "vmSize": {
+    "vmDCSize": {
+      "value": "Standard_A2_v2"
+    },
+    "vmClientSize": {
+      "value": "Standard_A2_v2"
+    },
+    "vmAppSize": {
       "value": "Standard_DS2_v2"
     },
     "dnsLabelPrefix": {

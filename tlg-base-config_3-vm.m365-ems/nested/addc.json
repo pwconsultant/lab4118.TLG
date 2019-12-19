@@ -32,7 +32,7 @@
       "location": "[parameters('SharedVmConfig').location]",
       "properties": {
         "hardwareProfile": {
-          "vmSize": "[parameters('SharedVmConfig').vmSize]"
+          "vmSize": "[parameters('SharedVmConfig').vmDCSize]"
         },
         "osProfile": {
           "computerName": "[parameters('vmName')]",
