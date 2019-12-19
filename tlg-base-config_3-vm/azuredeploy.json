@@ -19,7 +19,8 @@
     "serverOS": {
       "type": "string",
       "allowedValues": [
-        "2012-R2-Datacenter", "2016-Datacenter"
+        "2012-R2-Datacenter",
+        "2016-Datacenter"
       ],
       "metadata": {
         "description": "The OS of application servers in your deployment."
@@ -41,7 +42,8 @@
     "deployClientVm": {
       "type": "string",
       "allowedValues": [
-        "No", "Yes"
+        "No",
+        "Yes"
       ],
       "metadata": {
         "description": "Choose 'No' to deploy no client VM, or 'Yes' if you want to deploy a client VM from a custom generalized VHD that you have uploaded to an accessible storage account."
@@ -62,6 +64,27 @@
       },
       "defaultValue": "Standard_DS2_v2"
     },
+    "vmDCSize": {
+      "type": "string",
+      "metadata": {
+        "description": "Select a VM size for Domain Controller VM in your deployment."
+      },
+      "defaultValue": "Standard_A2_v2"
+    },
+    "vmClientSize": {
+      "type": "string",
+      "metadata": {
+        "description": "Select a VM size for CLIENT VMs in your deployment."
+      },
+      "defaultValue": "Standard_A2_v2"
+    },
+    "vmAppSize": {
+      "type": "string",
+      "metadata": {
+        "description": "Select a VM size for APP/SQL VMs in your deployment."
+      },
+      "defaultValue": "Standard_DS2_v2"
+    },
     "dnsLabelPrefix": {
       "type": "string",
       "metadata": {
@@ -73,7 +96,7 @@
       "metadata": {
         "description": "Auto-generated container in staging storage account to receive post-build staging folder upload."
       },
-      "defaultValue": "https://raw.githubusercontent.com/maxskunkworks/tlg/master/tlg-base-config_3-vm"
+      "defaultValue": "https://raw.githubusercontent.com/pwconsultant/TLG/master/tlg-base-config_3-vm.m365-ems/azuredeploy.json"
     },
     "_artifactsLocationSasToken": {
       "type": "securestring",
@@ -352,8 +375,8 @@
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
-          "SharedVmConfig": { 
-            "value": "[variables('SharedVmConfig')]" 
+          "SharedVmConfig": {
+            "value": "[variables('SharedVmConfig')]"
           },
           "vmName": {
             "value": "[variables('VMs').adVmName]"
@@ -386,8 +409,8 @@
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
-          "SharedVmConfig": { 
-            "value": "[variables('SharedVmConfig')]" 
+          "SharedVmConfig": {
+            "value": "[variables('SharedVmConfig')]"
           },
           "vmName": {
             "value": "[variables('VMs').appVmName]"
@@ -421,8 +444,8 @@
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
-          "SharedVmConfig": { 
-            "value": "[variables('SharedVmConfig')]" 
+          "SharedVmConfig": {
+            "value": "[variables('SharedVmConfig')]"
           },
           "vmName": {
             "value": "[variables('VMs').cliVmName]"
